@@ -1,0 +1,58 @@
+/* Apply the styles to the entire component */
+:host {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: black;
+}
+
+/* Style the "Enter Salary" label */
+.headerFont {
+    font-size: 30px; 
+    color: green; 
+    font-family: 'Open Sans'; 
+    font-weight: bold; 
+    padding: 5px 5px 5px 15px;
+}
+/* Style the paragraph elements */
+p {
+    font-size: 16px;
+    color: black;
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add padding to the top and bottom */
+    font-weight: bold;
+}
+
+.pay-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically align contents */
+}
+
+.pay-values {
+    flex: 1; /* Make the pay values take up available space */
+    padding: 10px;
+}
+
+.rounded-box {
+    width: 250px; /* width  */
+    background-color: #f0f0f0; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+}
+
+    .red-text {
+        color: red;
+    }
+        
+    .green-text {
+        color: green;
+    }
+    .subTitleText {
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    .error-text {
+        color: green;
+        font-size: 18px; /* Adjust the font size as needed */
+    }

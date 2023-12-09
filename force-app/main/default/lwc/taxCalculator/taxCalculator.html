@@ -1,0 +1,38 @@
+<template>
+    <lightning-card>
+        <h1 class="headerFont">Net Salary Calculator</h1>
+        <div class="slds-p-around_medium">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="slider-id-2">
+                <span class="slds-slider-label">
+                    <span class="slds-slider-label__label" style="font-weight: bold; font-size: 18px;">Gross Salary</span>
+                    <span class="slds-slider-label__range" style="font-weight: bold; font-size: 18px;">$0 - $200,000</span>
+                </span>
+                </label>
+                <div class="slds-form-element__control">
+                <div class="slds-slider">
+                <input type="range" id="slider-id-2" class="slds-slider__range" onchange={calculatePay} value={salary} min="0" max="200000"  />
+                 <span class="slds-slider__value " aria-hidden="true"></span>
+                </div>
+                </div> 
+            </div>
+            <br>
+            <div id="error-message-id-1" class="slds-form-element__help error-text">Use the slider to find your salary. <br> The net salary is calculated below.
+          </div>
+                </div>
+            <div class="pay-container slds-p-around_medium">
+                <div class="pay-values">
+                    <p>Yearly Pay: <span class="green-text">${yearlyRoundedPay}</span></p>
+                    <p>Six Months Pay: <span class="green-text">${sixMonthsPay}</span></p>
+                    <p>Monthly Pay: <span class="green-text">${monthlyPay}</span></p>
+                    <p>Bi-Weekly Pay: <span class="green-text">${biWeeklyPay}</span></p>
+                </div>
+                <div class="rounded-box slds-p-around_medium">
+                    <p class="subTitleText">Yearly Deductions</p>
+                    <p>Federal Tax: <span class="red-text">${federalWithholdings}</span></p>
+                    <p>Social Security Tax: <span class="red-text">${socialSecurityWithholdings}</span></p>
+                    <p>Medicare Tax: <span class="red-text">${medicareWitholdings}</span></p>
+                </div>
+            </div>
+    </lightning-card>
+</template>
