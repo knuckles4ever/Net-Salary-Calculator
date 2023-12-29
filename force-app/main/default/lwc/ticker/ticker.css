@@ -1,0 +1,24 @@
+.ticker-container {
+  width: 100%;
+  background-color: #140b47;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.ticker-content {
+  animation: tickerScroll 10s linear infinite;
+  font-size: 22px;
+  font-family: Varela Regular;
+}
+
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
