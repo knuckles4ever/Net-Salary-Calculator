@@ -5,20 +5,12 @@
     justify-content: center;
 }
 
-
-.border-container {
-    border: 2px solid #140b47; /* Apply border to the border-container */
-    border-radius: 10px;
-    width: 300px; /* Adjust the width as needed */
-    position: relative;
-    z-index: 1;
-}
 .digital-clock-container {
+    border: 2px solid #140b47; /* Apply border to the border-container */
     display: inline-block; /* To fit the content size */
     padding: 10px;
-    border: 2px solid #140b47;
+    width: 300px; /* Adjust the width as needed */
     border-radius: 10px;
-    
     text-align: center;
     margin: 0 auto;
     position: relative;
