@@ -5,10 +5,11 @@
     justify-content: center;
 }
 
+
 .border-container {
     border: 2px solid #140b47; /* Apply border to the border-container */
     border-radius: 10px;
-    width: 320px; /* Adjust the width as needed */
+    width: 300px; /* Adjust the width as needed */
     position: relative;
     z-index: 1;
 }
@@ -17,7 +18,7 @@
     padding: 10px;
     border: 2px solid #140b47;
     border-radius: 10px;
-    width: 320px; /* Adjust the width as needed */
+    
     text-align: center;
     margin: 0 auto;
     position: relative;
