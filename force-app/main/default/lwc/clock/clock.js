@@ -14,6 +14,7 @@ export default class DigitalClock extends LightningElement {
             hour12: true, // Use 12-hour format
             timeZoneName: 'short',
         };
+        
         this.currentTime = new Intl.DateTimeFormat(undefined, optionsTime).format(now);
 
         const optionsSeconds = {
