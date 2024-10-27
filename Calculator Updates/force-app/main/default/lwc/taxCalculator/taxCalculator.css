@@ -1,0 +1,161 @@
+/* Apply the styles to the entire component */
+:host {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+/* Style the "Enter Salary" label */
+.headerFont {
+    font-size: 30px; 
+    color: #3f51b5; /* Updated blue color */
+    font-family: 'Lato', sans-serif;
+    font-weight: bold; 
+    padding: 5px 5px 5px 15px;
+}
+
+/* Style the pay and deduction elements */
+.pay-values, .rounded-box {
+    display: block;
+    margin: 10px 0; /* Space out the elements to avoid squishing */
+}
+
+/* Pay and deduction items style */
+.pay-item {
+    margin: 5px 0; /* Add space between pay/deduction items */
+    font-weight: bold;
+    word-wrap: break-word; /* Prevents squishing */
+    white-space: nowrap; /* Prevents content from collapsing into a single line */
+    min-width: 150px; /* Add a minimum width to prevent squishing at 0 values */
+}
+
+/* Ensure consistency between div and p */
+.pay-values div, .rounded-box div {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+/* Style the paragraph elements */
+p {
+    font-size: 16px;
+    color: black;
+    margin: 0;
+    padding: 10px 0; 
+    font-weight: bold;
+}
+.custom-container {
+    border-radius: 10px;        /* Rounded corners for the entire calculator */
+    padding: 10px;
+    background-color: #f5f5f5;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.pay-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Make sure items align from the top */
+    flex-wrap: wrap; /* Ensure the layout doesn't squish when the screen is narrow */
+}
+
+/* Desktop and larger screens */
+.pay-values {
+    flex: 1;
+    padding: 0px;
+    min-width: 150px;
+    margin-top: 20px; /* Add margin for desktop */
+}
+
+/* For screens smaller than 600px (Mobile) */
+@media only screen and (max-width: 600px) {
+    .pay-values {
+        margin-top: 0; /* Remove margin on mobile */
+    }
+}
+
+.rounded-box {
+    width: 250px;
+    background-color: #f5f5f5; 
+    border-radius: 20px;
+    border: 2px solid #d8d8d8;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Color styles */
+.red-text {
+    color: red;
+}
+
+.blue-text {
+    color: #3f51b5;
+}
+
+/* Subtitle styling */
+.subTitleText {
+    font-size: 16px;
+    margin-bottom: 5px;
+    
+}
+
+/* Slider container */
+.slider-container {
+    border: 2px solid #d8d8d8;
+    border-radius: 10px;
+    padding: 20px 15px 5px 15px;
+    background-color: #f5f5f5;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+/* Custom slider styles */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #d8d8d8;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    margin: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3f51b5;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: #303f9f;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #3f51b5;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background-color: #303f9f;
+}
+
+.slider-value {
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #3f51b5;
+}

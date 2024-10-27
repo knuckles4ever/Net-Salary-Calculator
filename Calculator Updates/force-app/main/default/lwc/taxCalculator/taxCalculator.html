@@ -1,0 +1,53 @@
+<template>
+    <div class="custom-container" role="region" aria-labelledby="net-salary-calculator">
+        <lightning-card>
+            <h1 id="net-salary-calculator" class="headerFont">Net Salary Calculator</h1>
+            <div class="slds-p-around_medium">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="slider-id-2">
+                        <span class="slds-slider-label">
+                            <span class="slds-slider-label__label" style="font-weight: bold; font-size: 18px; color: black;">Gross Salary</span>
+                            <span class="slds-slider-label__range" style="font-weight: bold; font-size: 18px; color: black;">$0 - $200,000<br></span>
+                        </span>
+                    </label>
+                    <div class="slider-container" aria-labelledby="gross-salary-label">
+                        <div class="slds-form-element__control">
+                            <div class="slds-slider">
+                                <span class="slds-slider__value slider-value" aria-live="polite" aria-atomic="true">
+                                    ${formattedSalary}
+                                </span>
+                                <input type="range" id="slider-id-2" class="slds-slider__range" oninput={updateSalary} value={salary} min="0" max="200000" aria-labelledby="gross-salary-label" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-description">
+                    <span style="font-weight: bold;" class="error-text" aria-live="polite"><br>Move the slider to choose your salary.</span>
+                </div>
+                <div class="slider-description">
+                    <span style="font-weight: bold;" class="error-text" aria-live="polite">Your tax calculations are listed below.</span>
+                </div>
+            </div>
+
+            <!-- Pay Container Starts Here -->
+            <div class="pay-container slds-p-around_medium">
+                <!-- Focusable divs instead of p for better control -->
+                <div class="pay-values" tabindex="0"><br>
+                    <div class="pay-item">Yearly Pay: <span class="blue-text">${yearlyRoundedPay}</span></div>
+                    <div class="pay-item">6 Months Pay: <span class="blue-text">${sixMonthsPay}</span></div>
+                    <div class="pay-item">Monthly Pay: <span class="blue-text">${monthlyPay}</span></div>
+                    <div class="pay-item">Bi-Weekly Pay: <span class="blue-text">${biWeeklyPay}</span></div>
+                </div>
+
+                <div class="rounded-box slds-p-around_medium" tabindex="0">
+                    <p class="subTitleText">Yearly Deductions</p>
+                    <div class="pay-item">Federal Tax: <span class="red-text">${federalWithholdings}</span></div>
+                    <div class="pay-item">SS Tax: <span class="red-text">${socialSecurityWithholdings}</span></div>
+                    <div class="pay-item">Medicare Tax: <span class="red-text">${medicareWitholdings}</span></div>
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+</template>
+
+
